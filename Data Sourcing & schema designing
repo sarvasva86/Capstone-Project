@@ -1,0 +1,91 @@
+
+
+1. Choosing Data Sources
+
+Option 1: Using Preexisting APIs
+Google Maps API (for places, routes, and geolocation).  
+OpenWeatherMap API (for real-time weather updates).  
+Eventbrite API (for local events at travel destinations).  
+
+API Formats
+- Google Maps API returns data in JSON.  
+- OpenWeatherMap API returns JSON/XML.  
+- Eventbrite API returns JSON.  
+
+Processing API Data 
+Before storing API data, ensure:  
+- only extract the necessary fields (e.g., destination name, weather, coordinates).  
+- clean messy data (e.g., filter out irrelevant fields).  
+
+---
+
+2. Database Schema Design  
+
+Since using MongoDB (NoSQL), schema will have:  
+ A Users collection (for authentication).  
+ An Itineraries collection (storing travel plans).  
+ A Destinations collection (storing API data like locations & weather).  
+
+
+MongoDB Schema Design 
+
+User Model (user.js) 
+```js
+const mongoose = require("mongoose");
+
+const UserSchema = new mongoose.Schema({
+  name: String,
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
+});
+
+module.exports = mongoose.model("User", UserSchema);
+```
+
+
+Itinerary Model (itinerary.js)  
+```js
+const mongoose = require("mongoose");
+
+const ItinerarySchema = new mongoose.Schema({
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  destinations: [{ type: mongoose.Schema.Types.ObjectId, ref: "Destination" }],
+  startDate: Date,
+  endDate: Date,
+  createdAt: { type: Date, default: Date.now },
+});
+
+module.exports = mongoose.model("Itinerary", ItinerarySchema);
+```
+
+Destination Model (destination.js) 
+```js
+const mongoose = require("mongoose");
+
+const DestinationSchema = new mongoose.Schema({
+  name: String,
+  location: {
+    lat: Number,
+    lng: Number,
+  },
+  weather: {
+    temperature: Number,
+    condition: String,
+  },
+  attractions: [String],
+  createdAt: { type: Date, default: Date.now },
+});
+
+module.exports = mongoose.model("Destination", DestinationSchema);
+```
+
+---
+
+3. Uploading Schema to GitHub  
+
+Steps to Follow: 
+Add schema files** (`user.js`, `itinerary.js`, `destination.js`) to GitHub repository.  
+Create a `README.md` file** with links to the APIs i am using.  
+---
+
