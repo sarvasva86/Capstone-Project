@@ -1,0 +1,84 @@
+1. Tech Stack Confirmation
+Frontend: React (Recommended), Redux (Optional)  
+Backend: Node.js with Express (Recommended), Flask (Alternative)  
+Database: MongoDB (with Mongoose) or PostgreSQL (with Sequelize)  
+API Integration: Free APIs (Google Maps, OpenWeatherMap)  
+Deployment: Heroku (Required)  
+
+---
+
+2. Capstone Steps & Hatchways Submission Workflow
+
+Step 1: Project Proposal Submission (Mentor Approval Required)  
+- Submit your project proposal (which you already have) via Hatchways GitHub.  
+- Your mentor will provide feedback before proceeding.  
+
+Step 2: Basic App Structure (Mentor Approval Required)  
+- Set up the frontend (React, Redux) and backend (Express).  
+- Implement authentication (Signup/Login with JWT).  
+- Push the basic structure to Hatchways GitHub for mentor review.  
+
+Step 3: Core Features (Hatchways Grader Evaluation)  
+- **Frontend:Design an interactive itinerary planner.  
+- **Backend: CRUD API for itinerary management.  
+- **API Integration: Google Maps (geolocation, directions) & OpenWeatherMap.  
+
+Step 4: Advanced Features (Hatchways Grader Evaluation) 
+- Implement Redux for global state management (if applicable).  
+- Introduce **user preferences for personalized recommendations.  
+- Optimize API calls with caching strategies.  
+
+Step 5: Final Enhancements (Hatchways Grader Evaluation) 
+- Add responsive UI for mobile/tablets.  
+- Implement security measures (JWT, data encryption).  
+- Deploy on Heroku and share the live link.  
+
+Step 6: Project Submission & Review (Hatchways Grader Evaluation)  
+- Final review by Hatchways graders.  
+- Make improvements based on feedback.  
+
+---
+
+3. Key Features & Implementation Plan
+
+Frontend (React + Redux) 
+ User authentication (Signup/Login).  
+ Dynamic itinerary planner (Add/Edit/Delete places).  
+ Google Maps API for route visualization.  
+ OpenWeatherMap API for real-time weather.  
+ Responsive UI (Mobile-friendly).  
+
+Backend (Node.js + Express + MongoDB) 
+ JWT-based authentication.  
+ REST API for user data & itineraries.  
+ API calls to external services (Google Maps, Weather).  
+ MongoDB for storing user profiles & itineraries.  
+ Secure API endpoints with CORS & rate limiting.  
+
+Deployment 
+ Frontend: Heroku/Vercel  
+ Backend: Heroku/Render  
+ Database:MongoDB Atlas  
+
+---
+
+4. Next Steps
+
+Set Up Hatchways GitHub Repository
+- Create a public repository on GitHub under the Hatchways platform.  
+- Commit and push initial files (README, project structure).  
+
+Basic Frontend & Backend Setup 
+- Initialize React (Vite or CRA) and Node.js (Express) projects.  
+- Implement user authentication (JWT-based).  
+- Push code for mentor review.  
+
+Develop Core Features
+- Itinerary planner UI with Google Maps AP.  
+- Fetch weather updates using OpenWeatherMap API.  
+- CRUD operations for itinerary management.  
+
+Deployment & Testing
+- Deploy backend & frontend to Heroku.  
+- Test API responses with Postman.  
+- Validate UI responsiveness.  
