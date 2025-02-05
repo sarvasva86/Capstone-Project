@@ -1,0 +1,13 @@
+# In one terminal (server)
+cd server
+npm run dev
+
+# In another terminal (client)
+cd client
+npm start
+
+
+Go to http://localhost:3000 and check if the frontend loads.
+
+✅ If the itineraries appear, the frontend-backend connection is working! 🎉
+
