@@ -1,0 +1,48 @@
+/virtual-travel-planner
+│── /client (Frontend - React)
+│   │── /public
+│   │   ├── index.html
+│   │── /src
+│   │   │── /components
+│   │   │   ├── ItineraryList.jsx
+│   │   │   ├── ItineraryForm.jsx
+│   │   │   ├── DestinationCard.jsx
+│   │   │   ├── WeatherWidget.jsx
+│   │   │── /pages
+│   │   │   ├── Home.jsx
+│   │   │   ├── ItineraryPage.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Signup.jsx
+│   │   │── /redux (if using Redux)
+│   │   │   ├── store.js
+│   │   │   ├── itinerarySlice.js
+│   │   │── App.js
+│   │   │── index.js
+│   │── package.json
+│   │── .env (for API keys)
+│── /server (Backend - Node.js + Express)
+│   │── /config
+│   │   ├── db.js  (Database connection)
+│   │── /models
+│   │   ├── User.js
+│   │   ├── Itinerary.js
+│   │   ├── Destination.js
+│   │── /routes
+│   │   ├── authRoutes.js
+│   │   ├── itineraryRoutes.js
+│   │   ├── destinationRoutes.js
+│   │── /controllers
+│   │   ├── authController.js
+│   │   ├── itineraryController.js
+│   │── /middleware
+│   │   ├── authMiddleware.js (JWT authentication)
+│   │── server.js (Main backend entry point)
+│   │── package.json
+│   │── .env (for database connection & API keys)
+│── /tests
+│   │── /backend
+│   │   ├── itinerary.test.js
+│   │── /frontend
+│   │   ├── ItineraryList.test.js
+│── README.md
+│── .gitignore
