@@ -46,3 +46,28 @@
 │   │   ├── ItineraryList.test.js
 │── README.md
 │── .gitignore
+
+
+
+ Explanation of Folders & Files
+1️⃣ Frontend (client/)
+🔹 /components/ → Reusable UI components (ItineraryList, WeatherWidget, etc.).
+🔹 /pages/ → Full pages (Login, Home, ItineraryPage).
+🔹 /redux/ (optional) → Redux store & slices for state management.
+🔹 index.js & App.js → Entry point for React application.
+
+2️⃣ Backend (server/)
+🔹 /models/ → MongoDB schemas for users, itineraries, destinations.
+🔹 /routes/ → API routes for authentication & travel data.
+🔹 /controllers/ → Logic for handling API requests.
+🔹 /middleware/ → Authentication middleware for protecting routes.
+🔹 server.js → Main Express server configuration.
+
+3️⃣ API Keys & Configurations
+Store Google Maps API keys and MongoDB connection strings in .env files.
+Never commit .env files (add them to .gitignore).
+4️⃣ Testing (tests/)
+Backend tests → Test API routes using Jest + Supertest.
+Frontend tests → Test React components with React Testing Library.
+
+
